@@ -208,35 +208,8 @@ Options are:
 
 ### Simulate API Gateway locally
 
-_There are plans to remove the integrated simulation functionality in favor of
-using `serverless-offline` (see [#135][link-135]) which already does the job
-perfectly and fully integrates with `serverless-webpack`.
-Please consider switching to `serverless-offline` if you do not use it already._
-
-To start a local server that will act like API Gateway, use the following command.
-Your code will be reloaded upon change so that every request to your local server
-will serve the latest code.
-
-```bash
-$ serverless webpack serve
-```
-
-Options are:
-
-- `--port` or `-p` (optional) The local server port. Defaults to `8000`
-
-The `serve` command will automatically look for the local `serverless.yml` and serve
-all the `http` events. For example this configuration will generate a GET endpoint:
-
-```yaml
-functions:
-  hello:
-    handler: handler.hello
-    events:
-      - http:
-          method: get
-          path: hello
-```
+:exclamation: The serve command has been removed. See above how to achieve the
+same functionality with the [`serverless-offline`][link-serverless-offline] plugin.
 
 ## Example with Babel
 
@@ -244,7 +217,7 @@ In the [`examples`][link-examples] folder there is a Serverless project using th
 plugin with Babel. To try it, from inside the example folder:
 
 - `npm install` to install dependencies
-- `serverless webpack run -f hello` to run the example function
+- `serverless invoke local -f hello` to run the example function
 
 ## Provider Support
 
@@ -255,7 +228,6 @@ Plugin commands are supported by the following providers. ⁇ indicates that com
 | webpack        |      ✔︎     |         ✔︎        |        ⁇        |            ⁇           |
 | webpack invoke |      ✔︎     |         ✘        |        ⁇        |            ⁇           |
 | webpack watch  |      ✔︎     |         ✔︎        |        ⁇        |            ⁇           |
-| webpack serve  |      ✔︎     |         ✘        |        ⁇        |            ⁇           |
 
 ## Release Notes
 
