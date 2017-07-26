@@ -259,6 +259,12 @@ Plugin commands are supported by the following providers. ⁇ indicates that com
 
 ## Release Notes
 
+* 2.1.0
+  * Added support for webpack configuration in TypeScript format [#129][link-129]
+  * Fixed bug with serverless-offline exec [#154][link-154]
+  * Added unit tests for cleanup. Updated test framework [#11][link-11]
+  * Support single function deploy and packaging [#107][link-107]
+
 * 2.0.0
   * Support arbitrary Webpack versions as peer dependency [#83][link-83]
   * Support `serverless offline start` invocation [#131][link-131]
@@ -298,3 +304,8 @@ Plugin commands are supported by the following providers. ⁇ indicates that com
 [link-140]: https://github.com/elastic-coders/serverless-webpack/pull/140
 [link-141]: https://github.com/elastic-coders/serverless-webpack/issues/141
 [link-144]: https://github.com/elastic-coders/serverless-webpack/issues/144
+
+[link-11]: https://github.com/elastic-coders/serverless-webpack/issues/11
+[link-107]: https://github.com/elastic-coders/serverless-webpack/issues/107
+[link-129]: https://github.com/elastic-coders/serverless-webpack/pull/129
+[link-154]: https://github.com/elastic-coders/serverless-webpack/issues/154
